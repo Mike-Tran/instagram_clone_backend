@@ -7,7 +7,9 @@ ruby "2.7.4"
 gem "rails", "~> 7.0.3"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
+gem 'pg'
+
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -30,6 +32,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # image uploads to Amazon S3
 gem "carrierwave", "~> 2.0"
 gem "fog-aws"
+
+gem 'aws-sdk-s3', require: false
 
 gem "mini_magick"
 
