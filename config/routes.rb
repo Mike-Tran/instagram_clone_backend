@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :user_followers
   
-  resources :comments, only: [:index, :create]
+  resources :comments, only: [:index, :show, :create]
   resources :posts, only: [:index, :show, :create, :update, :destroy]
   resources :users, only: [:index, :show, :create]
   post '/login', to: 'authentication#login'

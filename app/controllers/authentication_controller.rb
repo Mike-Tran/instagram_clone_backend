@@ -1,4 +1,3 @@
-require 'pry'
 class AuthenticationController < ApplicationController
 
   skip_before_action :authorize, only: [:login, :auto_login]
@@ -6,7 +5,7 @@ class AuthenticationController < ApplicationController
   def login
 
     @user = User.find_by(username: params[:username])
-   
+    
     if @user && @user.authenticate(params[:password])
       payload = { user_id: @user.id }
       secret = 'tZFkyaT@bGj(y/cXK@*2yC6UT44dc+'
